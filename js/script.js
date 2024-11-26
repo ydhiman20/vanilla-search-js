@@ -31,7 +31,10 @@ async function fetchAndRenderData() {
     const endTime = performance.now(); // End timer
     const finalTime = endTime - startTime; // Calculate elapsed time
     const roundedValue = millisecondsToSeconds(finalTime); // Convert and round time
-    console.log("Time taken to process:", roundedValue); // Log rounded time
+    console.log.apply(console, [
+      `%c Time taken to process: ${roundedValue}ms `,
+      "color: #fff; background: #8000ff; padding:5px 0;",
+    ]);
   }
 }
 
